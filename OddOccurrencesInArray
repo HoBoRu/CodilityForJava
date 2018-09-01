@@ -25,3 +25,15 @@ class Solution {
         return unpaired; // return the unpaired value
     }
 }
+
+//解法2
+class Solution {
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+        if (X>=Y)
+			return 0;
+		double noOfJumps = Math.ceil((double)(Y-X)/D);
+		//System.out.println(noOfJumps);
+		return (int)noOfJumps;
+    }
+}

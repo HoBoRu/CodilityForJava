@@ -1,0 +1,26 @@
+class Solution 
+{
+public int solution(int X, int Y, int Z) {
+
+int count=0;
+while(X <= Y) 
+{
+X+=D+ ;
+count++;
+}
+return count;
+}
+}
+
+//解法2
+class Solution {
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+        if (X>=Y)
+			return 0;
+		double noOfJumps = Math.ceil((double)(Y-X)/D); 	//後-前除以空格 =至少要2.5格	
+		//Math.ceil取最接近且比他大的整數  System.out.println(Math.ceil(9.0)); 會出現10
+		//System.out.println(noOfJumps);
+		return (int)noOfJumps;
+    }
+}

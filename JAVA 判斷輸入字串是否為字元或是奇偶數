@@ -35,3 +35,45 @@ public class HelloWorld{
      
 }  
 }
+
+//新版 
+
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        //System.out.println("Hello World");
+        String str= "1tttt1";
+        boolean b = false;
+       
+        for  ( int  i  =  0 ; i  <  str.length(); i ++ )
+            {   
+                //System.out.println(str.charAt(i));   
+                if  ( ! Character.isDigit( str.charAt(i)))
+                {   
+                    System.out.println("輸入字串 "+ str + " is not int"); 
+                    b = true;
+                    System.out.println(b);
+                    break;
+                     //System.out.println(i);    
+                }  
+            }   
+            
+            if(b ==false)
+            {
+                 int a = Integer.parseInt(str);
+                 if (a %2 ==0)
+                 {
+                  System.out.println("輸入字串 "+ str + " is 偶數"); 
+                   //getServletContext().setAttribute("str", "偶數");//
+                   //response.sendRedirect("index.jsp");
+                 //break; 
+                 }
+                 else 
+                 {        
+              System.out.println("輸入字串 "+ str + " is 奇數");
+                  //getServletContext().setAttribute("str", "奇數");
+                  //response.sendRedirect("index.jsp");
+                  //break; 
+                 } 
+            }

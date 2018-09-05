@@ -1,0 +1,27 @@
+//BinaryGap
+class Solution 
+{
+    public int solution(int N) 
+    {
+    int gap = 0; //兩個1間隔
+        int maxgap = 0; //兩個1最大間隔
+        String b = Integer.toBinaryString(N); //化成binarybit
+        
+        for(int i = 1 ; i < b .length(); i++)  //檢查每個字串
+        {
+         if(b.charAt(i)=='1')  //如果某個字=1
+         {
+            if(gap > maxgap)
+            {
+              maxgap = gap;
+            }
+              gap = 0;  //間隔重新計算
+         }else   //如果某個字為0 
+         {
+          gap =gap +1;
+         }
+        }
+        
+        return maxgap;
+    }
+}
